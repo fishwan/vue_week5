@@ -1,0 +1,134 @@
+
+/* module */
+.card-img {
+    position: relative;
+}
+
+.card-img:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.card-title {
+    font-size: 15px;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+/* layout */
+.container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 24px;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+    z-index: -1;
+}
+
+.page-title:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 3px;
+    background-color: #000;
+    bottom: -1rem;
+}
+
+/* page */
+.product-item {
+    border: none;
+    margin-bottom: 2.4rem;
+}
+
+.product-item .img {
+    padding-bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.product-item .img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.cart-item {
+    padding: 1.5rem;
+    position: relative;
+    border-bottom: 1px solid #000;
+}
+
+.cart-item-img {
+    flex: 1;
+    max-width: 120px;
+}
+
+.cart-item-img .img {
+    padding-bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.cart-item-img .img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.cart-item-body {
+    flex: 2;
+    margin-left: 1.5rem;
+}
+
+.cart-sale {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 991px) {
+    .cart {
+        margin-bottom: 3rem;
+    }
+    .cart-item:first-child {
+        display: none !important;
+    }
+    .cart-item-sale:before {
+        content: '單價：';
+    }
+    .cart-item-subtotal:before {
+        content: '小計：';
+    }
+    .cart-item-delete {
+        position: absolute;
+        right: 1.5rem;
+        top: .5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .cart-item-body {
+        flex: 6;
+    }
+    .cart-item-sale,
+    .cart-item-subtotal,
+    .cart-item-delete {
+        text-align: center;
+    }
+}
